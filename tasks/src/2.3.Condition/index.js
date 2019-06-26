@@ -27,10 +27,9 @@ function renderPosts(posts) {
 }
 
 function renderLot(name, description, tags) {
-  name = name || '<Неизвестный предмет>';
   return (
     <div className="lot">
-      <div className="lotName">{name}</div>
+      <div className="lotName">{name || '<Неизвестный предмет>'}</div>
       {description && <div className="lotDescription">{description}</div>}
       {tags && renderTags(tags)}
     </div>
